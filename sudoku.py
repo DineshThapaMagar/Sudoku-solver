@@ -15,7 +15,9 @@ board = [
 for i in range(0, 9):
     for j in range(0, 9):
         try :
-            board[i][j] += int(input(f'Enter number for [{i}][{j}] : '))
+            row = i+1
+            col = j+1
+            board[i][j] += int(input(f'Enter number for [{row}][{col}] : '))
         except ValueError :
             print('Number is not entered!')
     print()
