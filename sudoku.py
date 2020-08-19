@@ -85,9 +85,9 @@ def find_empty(bo):
 
     return None
 
-print("Initial : ")
+print("Initial sudoku board : ")
 print_board(board)
 solve(board)
-print("\nSolved : ")
+print("\nSolved sudoku board : ")
 print("___________________")
 print_board(board)
