@@ -11,18 +11,18 @@ board = [
     [0,0,0,0,0,0,0,0,0],
     [0,0,0,0,0,0,0,0,0]]
 
-
+# User input 
 for i in range(0, 9):
     for j in range(0, 9):
         try :
             row = i+1
             col = j+1
-            board[i][j] += int(input(f'Enter number for [{row}][{col}] : '))
+            board[i][j] += int(input(f"Enter number for [{row}][{col}] : "))
         except ValueError :
-            print('Number is not entered!')
+            print("Number is not entered!")
     print()
 
-       
+
 def solve(bo):
     find = find_empty(bo)
     if not find:
@@ -60,7 +60,6 @@ def valid(bo, num, pos):
         for j in range(box_x * 3, box_x*3 + 3):
             if bo[i][j] == num and (i,j) != pos:
                 return False
-
     return True
 
 
@@ -84,7 +83,6 @@ def find_empty(bo):
         for j in range(len(bo[0])):
             if bo[i][j] == 0:
                 return (i, j)  # row, col
-
     return None
 
 print("Initial sudoku board : ")
